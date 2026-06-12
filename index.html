@@ -2,72 +2,11 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>3 anos com você ❤️</title>
+  <title>Nossa História ❤️</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #ffdee9, #b5fffc);
-      color: #333;
-      text-align: center;
-    }
-
-    .container {
-      padding: 26px 18px;
-      max-width: 420px;
-      margin: auto;
-    }
-
-    img {
-      width: 100%;
-      border-radius: 22px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
-      margin-bottom: 22px;
-    }
-
-    h1 {
-      color: #e63946;
-      font-size: 1.9em;
-      margin-bottom: 12px;
-    }
-
-    h2 {
-      margin-top: 26px;
-      font-size: 1.3em;
-      color: #1d3557;
-    }
-
-    p {
-      font-size: 1.05em;
-      line-height: 1.65;
-    }
-
-    button {
-      margin-top: 28px;
-      padding: 14px 26px;
-      border: none;
-      border-radius: 28px;
-      background: #e63946;
-      color: #fff;
-      font-size: 1em;
-      cursor: pointer;
-    }
-
-    .msg {
-      display: none;
-      margin-top: 20px;
-      font-weight: bold;
-      color: #1d3557;
-    }
-
-    footer {
-      margin-top: 36px;
-      font-size: 0.9em;
-      opacity: 0.85;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
+  
 </head>
 
 <body>
@@ -75,10 +14,15 @@
 
     <img src="casal.png" alt="Lucas e Nicole">
 
-    <h1>Feliz 3 anos de namoro, Amor ❤️</h1>
+    <h1 id="contador"></h1>
+
     <p>
-      Três anos ao seu lado, Meu Tchan,<br>
-      e eu ainda escolheria você todos os dias.
+      Meu Tchan ❤️<br>
+      Eu ainda escolheria você todos os dias.
+    </p>
+
+    <p>
+      Desde 19/02/2023 escrevendo a melhor história da minha vida. ❤️
     </p>
 
     <h2>Nossa história</h2>
@@ -107,7 +51,26 @@
       Com amor, Lucas 💙<br>
       19/02 — nosso dia ❤️
     </footer>
+<button onclick="window.location.href='dia-dos-namorados/index.html'">
+  💌 Uma mensagem só para você
+</button>
 
   </div>
+
+  <script>
+    const dataInicio = new Date("2023-02-19T00:00:00");
+
+    function atualizarContador() {
+      const hoje = new Date();
+      const diferenca = hoje - dataInicio;
+      const dias = Math.floor(diferenca / (1000 * 60 * 60 * 24));
+
+      document.getElementById("contador").innerHTML =
+        dias + " dias ao seu lado ❤️";
+    }
+
+    atualizarContador();
+  </script>
+
 </body>
 </html>
